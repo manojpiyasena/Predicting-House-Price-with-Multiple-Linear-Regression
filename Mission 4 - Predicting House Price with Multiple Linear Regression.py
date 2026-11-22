@@ -53,8 +53,7 @@ import pandas as pd
 from azure.storage.blob import BlobServiceClient
 from io import StringIO
 
-connect_str = "DefaultEndpointsProtocol=https;AccountName=level5data;AccountKey=cWgxWhPELQdrW0sIgA/eXM8/k9+xdaELukN8sg5imfhm4wVIJQFmypEph/Ppy500v41mYT+iCBbC+AStsfHbAQ==;EndpointSuffix=core.windows.net"
-container_name = "businesscases"
+connect_str = azure_key = os.getenv("AZURE_STORAGE_KEY")
 blob_name = "house_sales_prediction.csv"
 
 # Create a BlobServiceClient using the connection string
